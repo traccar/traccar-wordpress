@@ -1,4 +1,6 @@
 === Traccar Map ===
+Donate link: https://www.traccar.org/donate/
+Tags: traccar, gps, tracking, map, shortcode
 Requires at least: 6.0
 Requires PHP: 7.4
 Stable tag: 1.0.0
@@ -23,7 +25,7 @@ are hidden from visitors and show a setup hint to administrators.
 == Installation ==
 
 1. Copy this plugin directory to wp-content/plugins/traccar-map (or ZIP a
-   traccar-map folder containing traccar-map.php and readme.txt and upload it
+   traccar-map folder containing traccar-map.php, readme.txt and LICENSE.txt and upload it
    through Plugins → Add New → Upload Plugin).
 2. Activate Traccar Map.
 3. Create a dedicated non-administrator Traccar account, enable Read-Only and
@@ -62,6 +64,26 @@ Replacing the setting alone does not revoke an old token.
 * The plugin retains settings on deactivation or deletion.
 
 Setup reference: https://www.traccar.org/user-management/
+
+== Support and donations ==
+
+Documentation: https://www.traccar.org/documentation/
+Community forums: https://www.traccar.org/forums/
+Plugin issues: https://github.com/traccar/traccar-wordpress/issues
+
+Support Traccar development through GitHub Sponsors:
+https://github.com/sponsors/traccar
+
+Other donation options: https://www.traccar.org/donate/
+
+== License ==
+
+Copyright 2026 Tananaev Solutions.
+
+This plugin is free software, licensed under the GNU General Public License,
+version 2 or (at your option) any later version. See LICENSE.txt for the full
+license text. It is distributed without any warranty, including the implied
+warranties of merchantability or fitness for a particular purpose.
 
 == Changelog ==
 
