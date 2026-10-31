@@ -1,7 +1,9 @@
 === Traccar Map ===
+Contributors: tananaev
 Donate link: https://www.traccar.org/donate/
 Tags: traccar, gps, tracking, map, shortcode
 Requires at least: 6.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPL-2.0-or-later

@@ -1,0 +1,37 @@
+name: Build plugin ZIP
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Lint PHP
+        run: php -l traccar-map.php
+
+      - name: Build ZIP
+        run: |
+          mkdir -p dist/traccar-map
+          cp traccar-map.php readme.txt LICENSE.txt dist/traccar-map/
+          cd dist
+          zip -r traccar-map.zip traccar-map
+
+      - name: Check packaged plugin
+        uses: WordPress/plugin-check-action@v1
+        with:
+          build-dir: dist/traccar-map
+
+      - name: Upload installable ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          name: traccar-map
+          path: dist/traccar-map.zip
