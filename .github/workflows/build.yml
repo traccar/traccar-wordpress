@@ -20,8 +20,11 @@ jobs:
 
       - name: Build ZIP
         run: |
+          VERSION="${GITHUB_REF_NAME#v}"
           mkdir -p dist/traccar-map
           cp traccar-map.php readme.txt LICENSE.txt dist/traccar-map/
+          perl -pi -e "s/^ \* Version:.*/ * Version: $VERSION/" dist/traccar-map/traccar-map.php
+          perl -pi -e "s/^Stable tag:.*/Stable tag: $VERSION/" dist/traccar-map/readme.txt
           cd dist
           zip -r traccar-map.zip traccar-map
 
